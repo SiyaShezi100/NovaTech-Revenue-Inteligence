@@ -1,4 +1,5 @@
 # NovaTech-Revenue-Inteligence
+Dashboard Link - https://us-west-2.quicksight.aws.amazon.com/sn/account/UdacityQuicksightLab/accounts/548602084193/dashboards/c13efbe0-744e-4fcf-966d-e3d244ff8b62
 AWS QuickSight Revenue Intelligence Dashboard connecting CRM, Marketing, and Support data
 # NovaTech Revenue Intelligence Dashboard
 

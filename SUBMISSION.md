@@ -23,9 +23,6 @@ Unified:
 
 
 
-
-
-
 │   ├── q-exploration-log.md
 # NovaTech Revenue Intelligence — Q Exploration Log
 
@@ -275,13 +272,67 @@ tickets, while Data Pipeline (310) and Billing (329) are notably lower.
 
 
 │   ├── data-architecture.md
+# Data Architecture
 
+## Overview
+
+The NovaTech Revenue Intelligence Dashboard integrates three business data sources:
+
+1. **CRM Deals** — sales opportunities, deal outcomes, revenue, sales representatives, regions and products.
+2. **Marketing Campaigns** — campaign activity, channels, funnel stages, responses, campaign spend and attributed revenue.
+3. **Support Tickets** — customer support activity, ticket priority, product area, resolution information, customer sentiment and recent ticket volume.
+
+The three datasets share the common field **`account_id`**, which is used to connect customer-level information across the business.
+
+## Unified Dataset Architecture
+
+The CRM Deals dataset is used as the primary/anchor dataset.
+
+The unified dataset connects the sources using `account_id`:
+
+```text
+Marketing Campaigns
+        |
+        | account_id
+        |
+        v
+    CRM Deals
+        ^
+        |
+        | account_id
+        |
+Support Tickets
 
 
 
 
 │   └── topic-configuration.md
 
+```markdown
+# Topic Configuration
+
+## Topic Name
+
+**NovaTech Revenue Intelligence**
+
+## Purpose
+
+The NovaTech Revenue Intelligence Topic provides natural-language access to the company's Marketing, Sales and Customer Support data.
+
+It allows users to ask business questions using natural language and receive answers based on the configured NovaTech datasets.
+
+## Datasets
+
+The Topic uses the following three datasets:
+
+- **CRM Deals**
+- **Marketing Campaigns**
+- **Support Tickets**
+
+The datasets are related using the shared field:
+
+```text
+account_id
 
 
 │
@@ -351,9 +402,12 @@ Dashboard KPIs
 <img width="1600" height="900" alt="20_Q_Baseline_Customer_Health png2" src="https://github.com/user-attachments/assets/3f829745-dfb7-47e1-83f0-b48b08916d84" />
 
 │
-└── submission/
-    └── NovaTech_Revenue_Intelligence_Dashboard.pdf
+submission/
+NovaTech_Revenue_Intelligence_Dashboard.pdf
+    
 [NovaTech Dashboard combined Doc.pdf](https://github.com/user-attachments/files/32241154/NovaTech.Dashboard.combined.Doc.pdf)
+
+
 [NovaTech_Revenue_Intelligence_Resubmission.zip](https://github.com/user-attachments/files/32241418/NovaTech_Revenue_Intelligence_Resubmission.zip)
 
 

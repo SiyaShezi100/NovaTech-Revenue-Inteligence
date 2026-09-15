@@ -221,7 +221,7 @@ The combination of revenue, sales activity and customer health provides a more c
 
 
 
-│   ├── executive-summary.md
+│ executive-summary.md
 Marketing Funnel 
 The sheet provides a comprehensive overview of marketing campaign performance, tracking 2,240 
 leads, 609 responses, and $1,127,223.09 in attributed revenue across multiple campaigns and 

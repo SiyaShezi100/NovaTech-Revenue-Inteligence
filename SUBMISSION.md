@@ -272,67 +272,219 @@ tickets, while Data Pipeline (310) and Billing (329) are notably lower.
 
 
 │   ├── data-architecture.md
-# Data Architecture
-
-## Overview
+Data Architecture
+Overview
 
 The NovaTech Revenue Intelligence Dashboard integrates three business data sources:
 
-1. **CRM Deals** — sales opportunities, deal outcomes, revenue, sales representatives, regions and products.
-2. **Marketing Campaigns** — campaign activity, channels, funnel stages, responses, campaign spend and attributed revenue.
-3. **Support Tickets** — customer support activity, ticket priority, product area, resolution information, customer sentiment and recent ticket volume.
-
-The three datasets share the common field **`account_id`**, which is used to connect customer-level information across the business.
-
-## Unified Dataset Architecture
-
-The CRM Deals dataset is used as the primary/anchor dataset.
-
-The unified dataset connects the sources using `account_id`:
-
-```text
+CRM Deals
 Marketing Campaigns
-        |
-        | account_id
-        |
-        v
-    CRM Deals
-        ^
-        |
-        | account_id
-        |
 Support Tickets
 
+The objective is to provide a unified view of revenue generation, sales performance, and customer health.
 
+Source Datasets
+CRM Deals
+
+The CRM Deals dataset serves as the primary business dataset and contains:
+
+Opportunity information
+Deal outcomes
+Deal values
+Sales representatives
+Products
+Regions
+Close dates
+
+Dataset Statistics:
+
+499 rows
+20 columns
+85 unique accounts
+Marketing Campaigns
+
+The Marketing Campaigns dataset contains marketing performance information including:
+
+Campaign names
+Campaign channels
+Funnel stages
+Campaign spend
+Lead responses
+Attributed revenue
+
+Dataset Statistics:
+
+2,240 rows
+20 columns
+24 null values in annual_income
+Support Tickets
+
+The Support Tickets dataset contains customer support activity and service metrics including:
+
+Ticket priority
+Product area
+Resolution dates
+Customer sentiment
+Ticket activity
+
+Dataset Statistics:
+
+3,000 rows
+20 columns
+59 null values in ticket_resolved_date
+Dataset Integration Strategy
+
+All datasets were connected using the common field:
+
+account_id
+
+The CRM Deals dataset was used as the primary dataset.
+
+A LEFT JOIN strategy was implemented to ensure all deal records remained available in the unified model.
+
+Join Key:
+
+account_id
+
+Join Type:
+
+LEFT JOIN
+
+Validation Results:
+
+All 85 accounts successfully linked
+Unified dataset created successfully
+No account relationships were lost during integration
+Unified Dataset Architecture
+
+Marketing Campaigns
+         |
+         | account_id
+         |
+         v
+ CRM Deals
+         ^
+         |
+         | account_id
+         |
+ Support Tickets
+
+Business Value
+
+The unified dataset enables cross-functional analysis such as:
+
+Marketing influence on sales outcomes
+Campaign effectiveness and revenue attribution
+Customer support activity by account
+Relationship between customer health and revenue performance
+Cross-dataset natural language queries using Amazon QuickSight Q
+
+This architecture provides a single source of truth for revenue intelligence and customer analysis.
 
 
 │   └── topic-configuration.md
+Topic Configuration
+Topic Name
 
-```markdown
-# Topic Configuration
+NovaTech Revenue Intelligence
 
-## Topic Name
+Purpose
 
-**NovaTech Revenue Intelligence**
+The NovaTech Revenue Intelligence Topic enables users to ask business questions using natural language across Marketing, Sales, and Customer Support data.
 
-## Purpose
+The topic was configured in Amazon QuickSight Q to improve the accuracy and context of question-and-answer interactions.
 
-The NovaTech Revenue Intelligence Topic provides natural-language access to the company's Marketing, Sales and Customer Support data.
+Datasets Included
 
-It allows users to ask business questions using natural language and receive answers based on the configured NovaTech datasets.
+The topic was built using the following datasets:
 
-## Datasets
+CRM Deals
+Marketing Campaigns
+Support Tickets
+Dataset Relationships
 
-The Topic uses the following three datasets:
+The datasets are connected through a shared business identifier:
 
-- **CRM Deals**
-- **Marketing Campaigns**
-- **Support Tickets**
-
-The datasets are related using the shared field:
-
-```text
 account_id
+
+Relationship Structure:
+
+Marketing Campaigns
+         |
+         | account_id
+         |
+         v
+ CRM Deals
+         ^
+         |
+         | account_id
+         |
+ Support Tickets
+
+Business Definitions
+
+The topic includes business-friendly descriptions and terminology to improve the natural language experience.
+
+Examples include:
+
+Win Rate
+Deal Value
+Closed Won Revenue
+Attributed Revenue
+Campaign Response Rate
+Marketing ROI
+Days to Close
+Resolution Time
+Customer Sentiment
+Calculated Metrics
+
+The topic supports analysis of several calculated metrics, including:
+
+Win Rate
+
+Won Deals / Total Deals
+
+Average Deal Value
+
+Total Deal Value / Total Deals
+
+Marketing ROI
+
+(Attributed Revenue - Campaign Spend) / Campaign Spend
+
+Days to Close
+
+Close Date - Created Date
+
+Resolution Time
+
+Resolved Date - Created Date
+
+Q Validation Questions
+
+The topic was validated using business questions across multiple domains.
+
+Marketing
+Which campaign source has the highest conversion rate?
+Which marketing channel generated the highest attributed revenue?
+Sales
+What is the win rate for deals sourced from Partner Referral?
+Customer Health
+Which product area has the longest average resolution time?
+Cross-Dataset Analysis
+What is the average deal size for accounts with more than three support tickets in the last 30 days?
+Benefits of Topic Configuration
+
+Configuring the topic provides:
+
+Improved Q&A accuracy
+Better business terminology recognition
+Enhanced cross-dataset analysis
+Consistent metric definitions
+Easier access to insights through natural language
+Outcome
+
+The NovaTech Revenue Intelligence Topic successfully enabled business users to explore marketing, sales, and customer support data through natural language questions while leveraging relationships established through the account_id field.
 
 
 │

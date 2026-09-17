@@ -1,5 +1,5 @@
 docs/
-│   ├── verification-log.md
+## verification-log.md
 CRM Deals:
   • 499 rows ✅
   • 20 columns ✅
@@ -23,7 +23,6 @@ Unified:
 
 
 
-│   ├── q-exploration-log.md
 # NovaTech Revenue Intelligence — Q Exploration Log
 
 ## Entry 1 — Marketing
@@ -31,7 +30,7 @@ Unified:
 ### Question
 Which campaign source has the highest conversion rate?
 
-### Q Response
+## Q-Response
 Based on the Marketing Funnel sheet from the Novatech Revenue Intelligence dashboard, Direct Mail has the highest conversion (response) rate among all campaign channels.
 Here's the full ranking:
 | Campaign Channel | Response Rate |
@@ -122,8 +121,8 @@ Verified using CRM deal value and Support ticket activity linked through account
 
 
 
-│   ├── vp-sarah-chen-report.md
-Executive Report for VP Sarah Chen
+vp-sarah-chen-report.md
+## Executive-Report-fo-VP-Sarah-Chen
 1. Executive Overview
 
 NovaTech Solutions requires an integrated view of revenue performance across marketing, sales and customer support. The Revenue Intelligence Dashboard was developed in Amazon Quick to combine these business perspectives and enable management to investigate campaign effectiveness, sales performance and customer health.
@@ -228,7 +227,7 @@ Authentication: 582
 
 
 
-│ executive-summary.md
+## executive-summary.md
 Marketing Funnel
 The sheet provides a comprehensive marketing performance dashboard tracking 2,240 leads across campaigns, channels, funnel stages, and attributed revenue totaling 1,127,223.09.
 
@@ -271,7 +270,7 @@ tickets, while Data Pipeline (310) and Billing (329) are notably lower.
 
 
 
-│   ├── data-architecture.md
+## data-architecture.md
 Data Architecture
 Overview
 
@@ -382,7 +381,7 @@ Cross-dataset natural language queries using Amazon QuickSight Q
 This architecture provides a single source of truth for revenue intelligence and customer analysis.
 
 
-│   └── topic-configuration.md
+## topic-configuration.md
 Topic Configuration
 Topic Name
 
@@ -421,7 +420,7 @@ Marketing Campaigns
          |
  Support Tickets
 
-Business Definitions
+## Business-Definitions
 
 The topic includes business-friendly descriptions and terminology to improve the natural language experience.
 
@@ -487,25 +486,25 @@ Outcome
 The NovaTech Revenue Intelligence Topic successfully enabled business users to explore marketing, sales, and customer support data through natural language questions while leveraging relationships established through the account_id field.
 
 
-│
-├── screenshots/
-│   ├── 01-data/
+
+## screenshots
+## 01-data
 <img width="1600" height="900" alt="01_CRM_SPICE_499_Rows_20_Columns png" src="https://github.com/user-attachments/assets/65c0e4c6-ae47-45b7-91bc-1d4e021f1bda" />
 <img width="1600" height="900" alt="02_Marketing_SPICE_2240_Rows_20_Columns png" src="https://github.com/user-attachments/assets/ac38556f-e4a2-4701-9d03-1d72fd586d45" />
 <img width="1600" height="900" alt="03_Support_SPICE_3000_Rows_20_Columns png" src="https://github.com/user-attachments/assets/e8e76bd1-abeb-4b17-860c-8a5a1b4d6d6b" />
 <img width="1600" height="900" alt="04_Data_Type_Correction png" src="https://github.com/user-attachments/assets/13fabae7-cf17-4fb4-aff2-ff1ebf8b0ec5" />
-Calculated Fields
+## Calculated-Fields
 <img width="1600" height="900" alt="08_Calculated_Fields png" src="https://github.com/user-attachments/assets/71d46f8a-714f-4b23-91d3-851d887356d2" />
 <img width="1600" height="900" alt="09_Calculated_Fields png" src="https://github.com/user-attachments/assets/12a83285-1a37-4d79-a1cd-16f37ff321a9" />
 <img width="1600" height="900" alt="10_Calculated_Fields png" src="https://github.com/user-attachments/assets/d20c5829-d9ab-45ac-8429-451f2b2223b5" />
-Marketing Funnel KPIs
+## Marketing -Funnel-KPIs
 <img width="1600" height="900" alt="09_Marketing_Filter_Controls png" src="https://github.com/user-attachments/assets/f3a73fbf-7add-424d-a81f-d68b7db431cf" />
 <img width="1600" height="900" alt="MARKETING FUNNEL KPI" src="https://github.com/user-attachments/assets/05a4b5a5-9444-43c2-b900-931c7efa4a11" />
 <img width="1600" height="900" alt="MARKETING FUNNEL KPI2" src="https://github.com/user-attachments/assets/424291d3-9431-426d-b7a2-f709f6a80b98" />
 <img width="1600" height="900" alt="MARKETING FUNNEL KPI3" src="https://github.com/user-attachments/assets/d16699f6-d3b9-47ae-9eb1-985083db870a" />
 
 
-│   ├── 02-data-transformation/
+## 02-data-transformation
 <img width="1600" height="900" alt="05_Unified_Dataset_Join_Diagram png" src="https://github.com/user-attachments/assets/f623a5dd-7850-4bea-be99-b0ff8e3f50fe" />
 <img width="1600" height="900" alt="06_Unified_Dataset_Join_Configuration png" src="https://github.com/user-attachments/assets/1bbfe2f1-f311-4801-ac3a-b5c38c3a1bc6" />
 <img width="1600" height="900" alt="07_Unified_Dataset_Join_Configuration png" src="https://github.com/user-attachments/assets/432f8db0-f3a1-481b-ba51-bb2d8ea27d27" />
@@ -513,8 +512,8 @@ Marketing Funnel KPIs
 
 
 
-│   ├── 03-dashboard/
-Annotations
+## 03-dashboard
+## Annotations
 <img width="1600" height="900" alt="Customer Health Annotation" src="https://github.com/user-attachments/assets/6b41df6e-73af-468e-a783-e899133f3eb9" />
 <img width="1600" height="900" alt="Marketing Funnel Annotation" src="https://github.com/user-attachments/assets/dd319c1e-0270-4d0b-a5a9-310a8a327d53" />
 <img width="1600" height="900" alt="Sales Pipeline Annotation" src="https://github.com/user-attachments/assets/4a9fd9f4-5f08-4dd3-b3e7-6dee5bbf5404" />
@@ -525,10 +524,10 @@ Annotations
 <img width="1600" height="900" alt="MARKETING FUNNEL KPI3" src="https://github.com/user-attachments/assets/0943451f-77a5-4c03-8d5c-225d0345a034" />
 
 
-│   ├── 04-dashboard-interactions/
+## 04-dashboard-interactions
 <img width="1600" height="900" alt="11_One_Click_Filter_Action png" src="https://github.com/user-attachments/assets/7a69cbf8-d912-40c2-be0b-319d1c8db1dd" />
 <img width="1600" height="900" alt="12_One_Click_Filter_Working png" src="https://github.com/user-attachments/assets/d57af2e5-2b5a-41d4-8862-4ae974a3e146" />
-Dashboard KPIs
+## Dashboard-KPIs
 <img width="1600" height="900" alt="Open Support Tickets 7" src="https://github.com/user-attachments/assets/cfc0fa82-bdc1-44e2-9d12-5ad01fa00c84" />
 <img width="1600" height="900" alt="Open Support Tickets 9" src="https://github.com/user-attachments/assets/6c0b3ec2-3b71-4199-b1be-4a277dd0ca1c" />
 <img width="1600" height="900" alt="Open Support Tickets KPI" src="https://github.com/user-attachments/assets/97d4ba40-a0fd-439b-8c9e-6715c0b32d79" />
@@ -539,28 +538,69 @@ Dashboard KPIs
 <img width="1600" height="900" alt="Open Support Ticktes8" src="https://github.com/user-attachments/assets/63d004e2-c754-41d7-95de-c3c11e75c25c" />
 
 
-│   ├── 05-topic/
+## 05-topic
 <img width="1600" height="900" alt="21_Topic_Configuration png" src="https://github.com/user-attachments/assets/c76e9510-7c92-42a9-9c60-248a47b1cfb8" />
 
-│   └── 06-q-baseline-after/
-│       ├── before-topic/
+## 06-q-baseline-after
+## before-topic
 <img width="1600" height="900" alt="18_Q_Baseline_Marketing png" src="https://github.com/user-attachments/assets/f8bb6f15-1cd6-460c-b2af-b7fa9bf75514" />
 <img width="1600" height="900" alt="20_Q_Baseline_Customer_Health png" src="https://github.com/user-attachments/assets/35d8f1e6-a4f7-4be0-bacf-a9d2d3ea04de" />
 <img width="1600" height="900" alt="Basekine Sales" src="https://github.com/user-attachments/assets/3e08a4f9-bb3e-4f90-a6dd-4ad566d01619" />
 
-│       └── after-topic/
+## after-topic
 <img width="1600" height="900" alt="18_Q_Baseline_Marketing png1" src="https://github.com/user-attachments/assets/056a8a04-c3f2-41b4-9af6-6acf1df2f474" />
 <img width="1600" height="900" alt="19_Q_Baseline_Sales png2" src="https://github.com/user-attachments/assets/ee80e57b-ff65-4b3b-aed6-b3b5f395b438" />
 <img width="1600" height="900" alt="20_Q_Baseline_Customer_Health png2" src="https://github.com/user-attachments/assets/3f829745-dfb7-47e1-83f0-b48b08916d84" />
 
-│
-submission/
+
+## submission
 NovaTech_Revenue_Intelligence_Dashboard.pdf
     
-[NovaTech Dashboard combined Doc.pdf](https://github.com/user-attachments/files/32241154/NovaTech.Dashboard.combined.Doc.pdf)
+[NovaTech Dashboard combined Doc.pdf](https://github.com/user-attachments/files/32326673/NovaTech.Dashboard.combined.Doc.pdf)
+
+## Dashboard-Summary 
+## Marketing-Funnel 
+The sheet provides a comprehensive overview of marketing campaign performance, 
+tracking 2,240 leads across multiple channels, attributed revenue of 1,127,223.09, 
+response rates, funnel stages, and marketing ROI. 
+Partner Referral generated the most leads (807), yet Direct Mail achieved the highest 
+response rate (0.53), suggesting different channels excel at different funnel objectives. 
+NovaPulse Launch drove the highest attributed revenue at 394,156.59, capturing over a 
+third of total revenue, while NovaEdge Awareness contributed the least at 34,279.64. 
+All campaigns show negative Marketing ROI, totaling -2,023.65, indicating widespread 
+underperformance despite generating 609 total response flags. 
+Most deals recorded zero won revenue (184 out of 499 records), highlighting significant 
+conversion challenges across the funnel. 
+
+## Sales-Pipeline 
+The sheet provides a comprehensive sales performance dashboard tracking deal 
+outcomes, revenue, product performance, and sales representative effectiveness across 
+499 total deals. 
+Of 499 deals, 315 were won, generating a Total Won Revenue of 707,201 with an Average 
+Deal Value of 1,417.24. 
+NovaPulse Starter led in volume with 118 deals, while NovaPulse Ultimate commanded 
+the highest Average Deal Value at 2,658,800%. 
+The top loss reasons were "No Decision Made" and "Poor Product Fit" at 43 opportunities 
+each, followed by "Competitor Won" with 34. 
+Average Days to Close was 66.76, with dramatic variation over time—ranging from 1 day on 
+Nov 5, 2024 to 177 days on Jan 5, 2025. 
+
+## Customer-Health 
+The sheet provides an overview of customer support ticket metrics, analyzing resolution 
+times, customer sentiment, product area distribution, and account-level ticket volumes 
+across 3,000 total tickets. 
+Resolution times are nearly identical across priority levels, with low at 58.92 hours, high at 
+57.62 hours, and medium at 57.49 hours, suggesting priority level has little impact on 
+resolution speed. 
+Neutral sentiment dominates with 1,953 tickets, while negative tickets (684) far exceed 
+positive ones (304), highlighting opportunities for customer experience improvement. 
+Notifications (601) and Analytics Dashboard (597) generate the most issues, while Data 
+Pipeline (310) and Billing (329) report the fewest.
 
 
-[NovaTech_Revenue_Intelligence_Resubmission.zip](https://github.com/user-attachments/files/32241418/NovaTech_Revenue_Intelligence_Resubmission.zip)
+
+
+
 
 
 

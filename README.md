@@ -53,7 +53,7 @@ CRM Deals is used as the primary/anchor dataset.
 
 Marketing Campaigns and Support Tickets are connected through `account_id` using LEFT JOIN relationships.
 
-```text
+
 Marketing Campaigns
         |
         | account_id
@@ -66,3 +66,145 @@ Marketing Campaigns
 Support Tickets
 
 
+The unified dataset was created from the three sources and saved to SPICE.
+
+The architecture preserves CRM accounts even when corresponding Marketing or Support records are not available.
+Data Preparation
+
+The datasets were imported into SPICE and verified for row and column counts.
+
+Data types were reviewed and corrected where required.
+
+Calculated fields were created to support analysis, including:
+
+Days to Close
+Won Deal Flag
+Lost Deal Flag
+Won Revenue
+Marketing Response Flag
+Resolution Hours
+
+## Dashboard
+
+The solution contains three dashboard sheets.
+
+## 1. Marketing Funnel
+
+The Marketing Funnel provides:
+
+Marketing KPI summaries
+Campaign performance
+Channel performance
+Funnel-stage analysis
+Response-rate analysis
+Attributed revenue
+Marketing ROI
+Interactive filters
+
+## 2. Sales Pipeline
+
+The Sales Pipeline provides:
+
+Deal outcome KPIs
+Won and Lost deal analysis
+Revenue analysis
+Win-rate analysis
+Loss-reason analysis
+Regional and representative performance
+Product performance
+Average deal value
+Days-to-close analysis
+Interactive filters
+
+## 3. Customer Health
+
+The Customer Health dashboard provides:
+
+Support ticket KPIs
+Ticket volume analysis
+Customer sentiment
+Priority analysis
+Product-area analysis
+Resolution-time analysis
+Customer risk analysis
+Account-level investigation
+Dashboard Interactivity
+
+## The dashboard includes interactive functionality including:
+
+Filter controls
+One-click filtering actions
+Cross-sheet navigation
+Drill-down analysis
+Account-level analysis
+Dashboard text annotations
+
+## Topic and Natural-Language Analysis
+
+A Quick Topic named NovaTech Revenue Intelligence was configured using:
+
+CRM Deals
+Marketing Campaigns
+Support Tickets
+The datasets are connected through account_id.
+
+The Topic provides business context and metric definitions so users can ask natural-language questions across the NovaTech data.
+
+## AI / Quick Evaluation
+
+Baseline Quick Chat questions were captured before Topic configuration.
+
+The same questions were then asked again after the Topic was configured and published.
+
+The evaluation includes questions covering:
+
+Marketing
+Sales
+Customer Health
+Cross-functional analysis
+
+The detailed Q Exploration Log is available in:
+
+docs/q-exploration-log.md
+
+## Key Business Insights
+
+The dashboard provides management with visibility into:
+
+Marketing response and campaign performance
+Sales deal outcomes and revenue
+Regional and representative sales performance
+Customer support volume
+Customer sentiment
+Product-area support issues
+Potential customer risk based on revenue, support activity and sentiment
+
+The dashboard and supporting analysis allow management to investigate these areas interactively rather than relying on manually consolidated reports.
+
+## Executive Reporting
+
+A stakeholder report was prepared for VP Sarah Chen, covering:
+
+Data strategy
+Dashboard design rationale
+Topic configuration
+AI comparison
+Key business insights
+Management value
+
+## Tools and Technologies
+AWS Amazon Quick
+SPICE
+Quick Topics / Natural-Language Q&A
+CSV datasets
+GitHub
+Data visualization and business intelligence techniques
+Project Outcome
+
+The NovaTech Revenue Intelligence Dashboard provides a centralized analytical solution for Marketing, Sales, and Customer Health.
+
+The combination of interactive dashboards, unified data, SPICE, and natural-language Topic analysis gives management a structured way to investigate revenue performance, customer health, and business activity.
+
+## Submission Evidence
+
+All project evidence has been organized into folders according to the submission checklist.
